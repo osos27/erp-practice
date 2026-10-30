@@ -1,0 +1,64 @@
+# ============================================================================
+#  .gitignore —— 适用于 Visual Studio / .NET Framework / Node 混合项目
+# ----------------------------------------------------------------------------
+#  原则：只提交"源码 + 项目文件 + 脚本"，构建产物和依赖一律不提交。
+#  判断标准：这个文件是不是"能从别的文件重新生成出来的"？
+#    - 能（bin/obj/packages/node_modules）→ 不提交
+#    - 不能（.cs/.csproj/.sql/.config）   → 必须提交
+# ============================================================================
+
+# ---------- Visual Studio ----------
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# ---------- 构建输出 ----------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.binlog
+*.log
+
+# 注意：如果将来确实要提交某个第三方 dll（比如没有 NuGet 包的老驱动），
+# 用强制添加绕过规则：  git add -f path\to\xxx.dll
+
+# ---------- NuGet ----------
+packages/
+*.nupkg
+.nuget/
+project.lock.json
+# packages.config 是项目文件（记录依赖版本），必须提交，别被上面的规则误伤
+!packages.config
+
+# ---------- Node / 前端（以后做 Vue 时用得上） ----------
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- 编辑器 / 系统 ----------
+*.swp
+*.tmp
+*.bak
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# ---------- 本地环境（绝不要提交） ----------
+*.env
+.env.local
+secrets.json

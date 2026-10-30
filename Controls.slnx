@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Controls/Controls.csproj" Id="f234c6d0-d1b0-4384-bb13-c04c9d1e7b4e" />
+  <Project Path="Models/Models.csproj" Id="89a4be6d-aaee-4906-b2ab-14d9495de2aa" />
+  <Project Path="tempWork/test.csproj" Id="a962c056-6110-4b8b-b920-94074ed00d7a" />
+</Solution>

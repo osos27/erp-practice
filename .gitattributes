@@ -1,0 +1,12 @@
+# 统一换行符处理，避免 Windows 下 CRLF/LF 反复产生无意义的 diff
+* text=auto
+*.cs   text
+*.sql  text
+*.md   text
+*.ps1  text
+*.cmd  text
+*.csproj text
+*.config text
+*.resx text
+*.png  binary
+*.jpg  binary
